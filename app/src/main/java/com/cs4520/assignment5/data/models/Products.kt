@@ -1,7 +1,6 @@
 package com.cs4520.assignment5.data.models
 
 //our classical product name, date,price, and type (for the image)
-
 sealed class Products(
     val name: String, val date: String?,
     val price: Double, val type: String

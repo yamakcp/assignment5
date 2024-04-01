@@ -18,10 +18,9 @@ fun AppNavHost(
         modifier = modifier, navController = navController, startDestination = startDestination
     )
     {
-        composable(NavigationItem.Login.route) { LoginScreen(navController)
-        }
+        composable(NavigationItem.ProductList.route) { ProductListScreen() }
 
-        composable(NavigationItem.ProductList.route) { ProductListScreen()
-        }
+        composable(NavigationItem.Login.route) { LoginScreen(navController) }
+
     }
 }

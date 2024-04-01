@@ -15,11 +15,12 @@ class FetchProducts(
 
 ): CoroutineWorker(context, workerParameters) {
     override suspend fun doWork(): Result {
-        Log.e("[KOBE] using worker", "using worker")
+        Log.e("[xxx] using worker", "using worker")
+
+        val productDatabase: ProductDatabase = ProductDatabase.getInstance(context)
 
         val productClient: ProductClient = ProductClient.getInstance()
 
-        val productDatabase: ProductDatabase = ProductDatabase.getInstance(context)
 
         val repository: ProductRepository = ProductRepositoryImpl(productDatabase.productDao()
                                                                     ,productClient)

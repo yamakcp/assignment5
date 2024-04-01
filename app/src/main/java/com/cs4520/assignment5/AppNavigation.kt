@@ -5,6 +5,6 @@ enum class Screen {
     PRODUCT_LIST,
 }
 sealed class NavigationItem(val route: String) {
-    object Login : NavigationItem(Screen.LOGIN.name)
     object ProductList : NavigationItem(Screen.PRODUCT_LIST.name)
+    object Login : NavigationItem(Screen.LOGIN.name)
 }
